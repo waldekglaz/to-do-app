@@ -1,0 +1,15 @@
+.form {
+  margin-top: -82px;
+  margin-bottom: 16px;
+}
+.form input {
+  background: var(--background);
+  box-shadow: var(--boxShadow);
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  color: #9495a5;
+  font-size: 12px;
+  padding: 18px 54px 18px 42px;
+  width: 310px;
+}
