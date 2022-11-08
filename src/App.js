@@ -52,12 +52,22 @@ function App() {
       </Button>
     );
   });
+  const clearCompletedHandler = () => {
+    const updatedTodos = todos.filter((item) => {
+      return item.completed !== true;
+    });
+    setTodos(updatedTodos);
+  };
   return (
     <div className="App" data-theme={theme}>
       <Header onThemeToggle={themeToggleHandler} theme={theme} />
       <ToDoForm onAddNewToDo={addNewToDo} />
       <main className="main-wrapper">
-        <ToDoList count={todos.length}>
+        <ToDoList
+          count={todos.length}
+          onClick={clearCompletedHandler}
+          filter={filter}
+        >
           {todos.filter(FILTER_MAP[filter]).map((item) => (
             <ToDoItem
               item={item}
