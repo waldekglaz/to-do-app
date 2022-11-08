@@ -1,5 +1,6 @@
 import React from "react";
-import { GrClose } from "react-icons/gr";
+import { IconContext } from "react-icons";
+import { IoCloseOutline } from "react-icons/io5";
 import classes from "./ToDoItem.module.css";
 
 function ToDoItem({ item, onRemoveToDo, onComplete }) {
@@ -20,7 +21,9 @@ function ToDoItem({ item, onRemoveToDo, onComplete }) {
         className={classes["close-icon"]}
         onClick={() => onRemoveToDo(item.id)}
       >
-        <GrClose />
+        <IconContext.Provider value={{ size: "18px", color: "#5B5E7E" }}>
+          <IoCloseOutline />
+        </IconContext.Provider>
       </button>
     </li>
   );
