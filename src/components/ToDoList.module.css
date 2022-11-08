@@ -1,0 +1,21 @@
+.main {
+  list-style: none;
+  background: var(--background);
+  box-shadow: var(--boxShadow);
+  border-radius: 5px;
+  width: 310px;
+  margin: 0 auto 16px;
+  font-size: 12px;
+  padding: 0 20px 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  color: #9495a5;
+}
+button {
+  font-size: 12px;
+  letter-spacing: -0.166667px;
+}

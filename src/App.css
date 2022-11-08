@@ -6,6 +6,10 @@
   height: 40vmin;
   pointer-events: none;
 }
+.main--wrapper {
+  background-color: var(--mainBgColor);
+  min-height: 100vh;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

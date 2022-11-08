@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import ToDoForm from "./components/ToDoForm";
+import ToDoList from "./components/ToDoList";
 import useLocalStorage from "use-local-storage";
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
     <div className="App" data-theme={theme}>
       <Header onThemeToggle={themeToggleHandler} theme={theme} />
       <ToDoForm onAddNewToDo={addNewToDo} />
+      <main className="main-wrapper">
+        <ToDoList count={todos.length} />
+      </main>
     </div>
   );
 }
