@@ -8,7 +8,7 @@ function Header({ onThemeToggle, theme }) {
     <header className={classes.header}>
       <div className={classes.container}>
         <h1>TODO</h1>
-        {theme === "light" && (
+        {(theme === "light" || theme === undefined) && (
           <IconContext.Provider value={{ size: "20px" }}>
             <BsFillMoonFill
               style={{ cursor: "pointer" }}
@@ -17,7 +17,7 @@ function Header({ onThemeToggle, theme }) {
           </IconContext.Provider>
         )}
         {theme === "dark" && (
-          <IconContext.Provider value={{ size: "20px" }}>
+          <IconContext.Provider value={{ size: "20px", color: "#fff" }}>
             <BsFillSunFill
               style={{ cursor: "pointer" }}
               onClick={onThemeToggle}

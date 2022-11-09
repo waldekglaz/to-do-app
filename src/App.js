@@ -18,6 +18,7 @@ const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme" ? "dark" : "light");
+
   const [todos, setTodos] = useLocalStorage("todos", []);
   const [filter, setFilter] = useState("All");
   const themeToggleHandler = () => {
