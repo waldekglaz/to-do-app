@@ -1,11 +1,17 @@
 .App {
   text-align: center;
+  position: relative;
 }
 .main-wrapper {
   background-color: var(--mainBgColor);
   min-height: 100vh;
 }
-
+.wrapper {
+  position: absolute;
+  top: 108px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .filter-container {
   background: var(--background);
   box-shadow: var(--boxShadow);

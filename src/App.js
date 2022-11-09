@@ -62,26 +62,29 @@ function App() {
   return (
     <div className="App" data-theme={theme}>
       <Header onThemeToggle={themeToggleHandler} theme={theme} />
-      <ToDoForm onAddNewToDo={addNewToDo} />
-      <main className="main-wrapper">
-        <ToDoList
-          count={todos.length}
-          onClick={clearCompletedHandler}
-          filter={filter}
-        >
-          {todos.filter(FILTER_MAP[filter]).map((item) => (
-            <ToDoItem
-              item={item}
-              key={item.id}
-              name={item.task}
-              completed={item.completed}
-              onRemoveToDo={removeToDoHandler}
-              onComplete={completeToDoHandler}
-            />
-          ))}
-        </ToDoList>
-        <div className="filter-container">{filterList}</div>
-      </main>
+      <div className="main-wrapper">
+        <div className="wrapper">
+          <ToDoForm onAddNewToDo={addNewToDo} />
+
+          <ToDoList
+            count={todos.length}
+            onClick={clearCompletedHandler}
+            filter={filter}
+          >
+            {todos.filter(FILTER_MAP[filter]).map((item) => (
+              <ToDoItem
+                item={item}
+                key={item.id}
+                name={item.task}
+                completed={item.completed}
+                onRemoveToDo={removeToDoHandler}
+                onComplete={completeToDoHandler}
+              />
+            ))}
+          </ToDoList>
+          <div className="filter-container">{filterList}</div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@
   --bgImageDesktop: url("./images/bg-desktop-light.jpg");
   --colorCompleted: #d1d2da;
   --mainBgColor: #f2f2f2;
-  --boxShadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  --boxShadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.8);
 }
 [data-theme="dark"] {
   --background: #25273d;
