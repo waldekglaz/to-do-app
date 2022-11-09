@@ -49,7 +49,7 @@ User is able to:
 
 ### Built with
 
-- React Js with CSS modules, [uuid](https://www.npmjs.com/package/uuidv4), [use-local-storage](https://www.npmjs.com/package/use-local-storage), [react-icons](https://react-icons.github.io/react-icons)
+- React Js with CSS modules, [uuid](https://www.npmjs.com/package/uuidv4), [use-local-storage](https://www.npmjs.com/package/use-local-storage), [react-icons](https://react-icons.github.io/react-icons), [framer-motion](https://www.npmjs.com/package/framer-motion)
 - Styled Components
 - useState, useRef hooks
 - Mobile-first
