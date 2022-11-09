@@ -28,3 +28,14 @@
 [aria-pressed="true"] {
   color: red;
 }
+
+@media (min-width: 768px) {
+  .wrapper {
+    top: 190px;
+  }
+  .filter-container {
+    width: 540px;
+    font-size: 18px;
+    letter-spacing: -0.25px;
+  }
+}

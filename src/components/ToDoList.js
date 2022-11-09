@@ -8,7 +8,7 @@ function ToDoList(props) {
       <ul className={classes.list}>{props.children}</ul>
       <div className={classes.footer}>
         {props.filter === "All" && (
-          <div>
+          <div className={classes.count}>
             {props.count} {props.count === 1 ? "item" : "items"} left
           </div>
         )}

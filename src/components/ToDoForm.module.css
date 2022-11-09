@@ -13,3 +13,10 @@
   padding: 18px 54px 18px 42px;
   width: 310px;
 }
+@media (min-width: 768px) {
+  .form input {
+    width: 540px;
+    font-size: 18px;
+    letter-spacing: -0.25px;
+  }
+}

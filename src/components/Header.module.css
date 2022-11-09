@@ -8,7 +8,7 @@
   color: #fff;
 }
 .container {
-  max-width: 320px;
+  width: 310px;
   margin: 0 auto;
   display: flex;
   align-items: baseline;
@@ -20,8 +20,17 @@
   font-size: 28px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
+  .container {
+    width: 540px;
+  }
   .header {
     background-image: var(--bgImageDesktop);
+    height: 300px;
+    padding-top: 70px;
+  }
+  .header h1 {
+    letter-spacing: 15px;
+    font-size: 40px;
   }
 }

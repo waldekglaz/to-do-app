@@ -19,3 +19,19 @@ button {
   font-size: 12px;
   letter-spacing: -0.166667px;
 }
+
+@media (min-width: 768px) {
+  .main {
+    width: 540px;
+    font-size: 18px;
+    letter-spacing: -0.25px;
+  }
+  .count {
+    font-size: 14px;
+    letter-spacing: -0.194444px;
+  }
+  button {
+    font-size: 14px;
+    letter-spacing: -0.194444px;
+  }
+}
