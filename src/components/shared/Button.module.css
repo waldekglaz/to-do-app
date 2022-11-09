@@ -5,3 +5,6 @@
   color: #9495a5;
   cursor: pointer;
 }
+[aria-pressed="true"] {
+  color: #3a7cfd;
+}
