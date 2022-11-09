@@ -35,8 +35,8 @@ User is able to:
 
 ### Screenshot
 
-![](./Screenshot_ToDoApp1.png)
-![](./Screenshot_ToDoApp2.png)
+![](./Screenshot_Desk_1.png)
+![](./Screenshot_Desk_2.png)
 ![](./Screenshot_ToDoApp1mob.png)
 ![](./Screenshot_ToDoApp2mob.png)
 
