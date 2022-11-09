@@ -22,12 +22,17 @@ function App() {
 
   const [todos, setTodos] = useLocalStorage("todos", []);
   const [filter, setFilter] = useState("All");
+  const [isInputValid, setIsInputValid] = useState(false);
+
   const themeToggleHandler = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
   const addNewToDo = (todo) => {
-    setTodos([{ id: uuidv4(), task: todo, completed: false }, ...todos]);
+    if (isInputValid) {
+      setTodos([{ id: uuidv4(), task: todo, completed: false }, ...todos]);
+      setIsInputValid(false);
+    }
   };
   const removeToDoHandler = (id) => {
     const removedItem = todos.filter((item) => item.id !== id);
@@ -65,7 +70,11 @@ function App() {
       <Header onThemeToggle={themeToggleHandler} theme={theme} />
       <div className="main-wrapper">
         <div className="wrapper">
-          <ToDoForm onAddNewToDo={addNewToDo} />
+          <ToDoForm
+            onAddNewToDo={addNewToDo}
+            isInputValid={isInputValid}
+            setIsInputValid={setIsInputValid}
+          />
 
           <ToDoList
             count={todos.length}
