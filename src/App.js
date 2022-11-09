@@ -7,6 +7,7 @@ import ToDoItem from "./components/ToDoItem";
 import Button from "./components/shared/Button";
 import useLocalStorage from "use-local-storage";
 import { v4 as uuidv4 } from "uuid";
+import { motion, AnimatePresence } from "framer-motion";
 // filters
 const FILTER_MAP = {
   All: () => true,
@@ -71,16 +72,25 @@ function App() {
             onClick={clearCompletedHandler}
             filter={filter}
           >
-            {todos.filter(FILTER_MAP[filter]).map((item) => (
-              <ToDoItem
-                item={item}
-                key={item.id}
-                name={item.task}
-                completed={item.completed}
-                onRemoveToDo={removeToDoHandler}
-                onComplete={completeToDoHandler}
-              />
-            ))}
+            <AnimatePresence>
+              {todos.filter(FILTER_MAP[filter]).map((item) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0, height: 0 }}
+                >
+                  <ToDoItem
+                    item={item}
+                    key={item.id}
+                    name={item.task}
+                    completed={item.completed}
+                    onRemoveToDo={removeToDoHandler}
+                    onComplete={completeToDoHandler}
+                  />
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </ToDoList>
           <div className="filter-container">{filterList}</div>
         </div>
